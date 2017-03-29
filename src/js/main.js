@@ -53,10 +53,11 @@ class APIClass{
     this.select_element=document.getElementsByName("select_category")[0];
     this.title_filter=document.getElementsByName("terms")[0];
 
-    this.select_element.addEventListener("change",this._changeSelectValue.bind(this));
-    this.title_filter.addEventListener("change",this._changeFilterValue.bind(this));
+    this.select_element.addEventListener("change",(e)=>this._changeSelectValue(e));
+    this.title_filter.addEventListener("keyup",(e)=> this._changeFilterValue(e));
+    this.title_filter.addEventListener("click",(e)=> e.preventDefault());
 
-    
+
     this._populateSelect(this.CATEGORIES);
 
     this._loadNewsData();
@@ -70,17 +71,61 @@ class APIClass{
   }
 
   _changeFilterValue(e){
-    console.log(e.target.value);
     const _self=this;
+    _self._filterNews(_self.news,e.target.value);
   }
 
   _filterNews(news,filtro=""){
     const _self=this;
-    _self.news.articles=news.articles.filter((article)=>{
+    let articles=news.articles.filter((article)=>{
       return article.title.toLowerCase().indexOf(filtro.toLowerCase())>-1;
     });
 
-    console.log(_self.news.articles);
+    _self.paintNews(articles);
+  }
+
+  _clearArticles(){
+    const articles_content=document.getElementById('articles');
+    articles_content.innerHTML="";
+  }
+  paintNews(articles){
+    const articles_content=document.getElementById('articles');
+    const _self=this;
+    _self._clearArticles();
+    /*
+    <div class="article">
+      <img src="img/buho.png" alt="">
+      <div class="row">
+        <p>Titulo</p>
+        <a href="#">Link</a>
+      </div>
+    </div>
+    */
+    for (let i = 0; i < articles.length; i++) {
+      const div_article=document.createElement('div');
+      div_article.className="article";
+
+      const img_article=document.createElement('img');
+      img_article.src=articles[i].urlToImage;
+
+
+      const row_element=document.createElement('div');
+      row_element.className="row";
+
+      const title=document.createElement('p');
+      title.innerHTML=articles[i].title;
+
+      const linkTo=document.createElement('a');
+      linkTo.innerHTML="Read more";
+
+
+      row_element.appendChild(title);
+      row_element.appendChild(linkTo);
+
+      div_article.appendChild(img_article);
+      div_article.appendChild(row_element);
+      articles_content.appendChild(div_article);
+    }
   }
 
 
@@ -104,6 +149,7 @@ class APIClass{
 
   _changeSelectValue(e){
     const _self=this;
+    console.log("Select value changed");
     _self._loadNewsData(e.target.value);
   }
 

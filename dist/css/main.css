@@ -27,15 +27,15 @@ body {
   font-family: bitterregular, sans-serif;
   color: #fff;
   font-size: 24px;
-  overflow: hidden;
   display: block;
   float: left;
   background: #9e84ce;
-  background-image: url(https://clluc.com/img/discover/probetas-graficas.png);
+  background-image: url(../img/observatorio.png);
   background-blend-mode: screen;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 40%;
+  background-size: 30%;
   min-height: 1000px; }
 
 .top_nav_bar {
@@ -79,7 +79,7 @@ body {
       display: block; }
   .container input[type="text"], .container select {
     box-sizing: content-box;
-    width: 40%;
+    width: 45%;
     float: left;
     height: 25px;
     padding: 5px;
@@ -95,6 +95,35 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     margin-bottom: 20px; }
+  .container .article {
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    display: block;
+    overflow: hidden;
+    margin: 20px 10px;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    text-align: center;
+    border: 2px solid #fff; }
+    .container .article img {
+      width: 100%;
+      max-width: 160px;
+      height: 160px;
+      margin: 0 auto;
+      margin-top: 20px; }
+    .container .article p, .container .article a {
+      text-align: center;
+      width: 100%;
+      float: left;
+      font-size: 12px;
+      color: #000;
+      font-family: bitterbold; }
+    .container .article a {
+      font-family: bitterregular;
+      text-decoration: none; }
   .container select.select_category {
     float: left;
     height: 39px; }

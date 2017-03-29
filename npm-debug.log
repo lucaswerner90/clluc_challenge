@@ -1,33 +1,33 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
-2 info using npm@3.10.3
-3 info using node@v6.7.0
+2 info using npm@3.10.6
+3 info using node@v4.4.7
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle MyTemplate@1.0.0~prestart: MyTemplate@1.0.0
 6 silly lifecycle MyTemplate@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle MyTemplate@1.0.0~start: MyTemplate@1.0.0
 8 verbose lifecycle MyTemplate@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle MyTemplate@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/je10617/Desktop/schibsted_last/node_modules/.bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
-10 verbose lifecycle MyTemplate@1.0.0~start: CWD: /Users/je10617/Desktop/schibsted_last
+9 verbose lifecycle MyTemplate@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/lucaswerner/Desktop/clluc_challenge/node_modules/.bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+10 verbose lifecycle MyTemplate@1.0.0~start: CWD: /Users/lucaswerner/Desktop/clluc_challenge
 11 silly lifecycle MyTemplate@1.0.0~start: Args: [ '-c', 'gulp init && gulp execute' ]
 12 silly lifecycle MyTemplate@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle MyTemplate@1.0.0~start: Failed to exec start script
 14 verbose stack Error: MyTemplate@1.0.0 start: `gulp init && gulp execute`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:242:16)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
 14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:877:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid MyTemplate@1.0.0
-16 verbose cwd /Users/je10617/Desktop/schibsted_last
+16 verbose cwd /Users/lucaswerner/Desktop/clluc_challenge
 17 error Darwin 16.4.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-19 error node v6.7.0
-20 error npm  v3.10.3
+19 error node v4.4.7
+20 error npm  v3.10.6
 21 error code ELIFECYCLE
 22 error MyTemplate@1.0.0 start: `gulp init && gulp execute`
 22 error Exit status 1

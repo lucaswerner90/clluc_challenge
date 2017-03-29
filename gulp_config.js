@@ -15,6 +15,7 @@ const CONFIG={
   ],
   src_files:{
     style:'/scss/**/*.{scss,css}',
+    images:'/img/**/*.{jpg,png}',
     code_entry_point:'/js/main.js',
     code:'/js/**/*.js',
     libs:'/js/libs/**/*',
@@ -23,6 +24,7 @@ const CONFIG={
   },
   compiled_files:{
     style:'/css',
+    images:'/img',
     code:'/js',
     libs:'/js/libs',
     data:'/data',

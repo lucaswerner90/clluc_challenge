@@ -12,15 +12,15 @@ body {
   font-family: $main_font_family;
   color: #fff;
   font-size: 24px;
-  overflow: hidden;
   display: block;
   float: left;
   background: $main_background_color;
-  background-image: url(https://clluc.com/img/discover/probetas-graficas.png);
+  background-image: url(../img/observatorio.png);
   background-blend-mode: screen;
+  background-attachment:fixed;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 40%;
+  background-size: 30%;
   min-height: 1000px;
 
 }
@@ -70,7 +70,7 @@ body {
       text-align: center;
       margin-bottom: 40px;
     }
-    
+
     img{
       margin: 0 auto;
       width: 150px;
@@ -80,7 +80,7 @@ body {
   }
   input[type="text"],select {
     box-sizing: content-box;
-    width: 40%;
+    width: 45%;
     float: left;
     height: 25px;
     padding: 5px;
@@ -98,7 +98,41 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     margin-bottom: 20px;
-}
+  }
+  .article {
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    display: block;
+    overflow: hidden;
+    margin: 20px 10px;
+    min-height:300px;
+    max-height: 300px;
+    padding: 20px;
+    background: $article_background_color;
+    text-align: center;
+    border: 2px solid #fff;
+
+    img{
+      width: 100%;
+      max-width: 160px;
+      height: 160px;
+      margin:0 auto;
+      margin-top:20px;
+    }
+    p,a{
+      text-align:center;
+      width:100%;
+      float:left;
+      font-size:12px;
+      color:$black;
+      font-family: bitterbold;
+    }
+    a {
+      font-family: bitterregular;
+      text-decoration: none;
+    }
+  }
   select.select_category {
       float: left;
       height: 39px;

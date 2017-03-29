@@ -45,6 +45,13 @@ gulp.task('copy_index',function(){
 });
 
 
+gulp.task('copy_images',function(){
+  return gulp.src([MAIN_CONF.src_folder+MAIN_CONF.src_files.images])
+  .pipe(gulp.dest(MAIN_CONF.compiled_folder+MAIN_CONF.compiled_files.images))
+  .pipe(browserSync.stream());
+});
+
+
 
 gulp.task('copy_libs',function(){
   return gulp.src([MAIN_CONF.src_folder+MAIN_CONF.src_files.libs])
@@ -65,8 +72,8 @@ gulp.task('localserver', function() {
 
 
 // Here we use the gulp watch function to recompile the files in case we need it.
-gulp.task('init',['copy_index','copy_libs','sass','js'], function () {
-  console.log("Compiled");
+gulp.task('init',['copy_index','copy_images','copy_libs','sass','js'], function () {
+  console.log("Code compiled :)");
 });
 
 gulp.task('execute',['init','localserver'],function () {

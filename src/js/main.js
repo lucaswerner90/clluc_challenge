@@ -51,9 +51,12 @@ class APIClass{
     this.API_SOURCES_URL="https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=148617c833c4406c80320ba99a8b6770";
     this.news=[];
     this.select_element=document.getElementsByName("select_category")[0];
-    this.select_element.addEventListener("change",this._changeSelectValue);
     this.title_filter=document.getElementsByName("terms")[0];
-    this.title_filter.addEventListener("change",this._changeFilterValue);
+
+    this.select_element.addEventListener("change",this._changeSelectValue.bind(this));
+    this.title_filter.addEventListener("change",this._changeFilterValue.bind(this));
+
+    
     this._populateSelect(this.CATEGORIES);
 
     this._loadNewsData();
